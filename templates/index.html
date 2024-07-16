@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .custom-card {
+      height: 350px; /* 카드 기본 높이 설정 */
+      transition: transform 0.2s ease-in-out; /* 변환 효과 추가 */
+    }
+    .custom-card img {
+      height: 300px; /* 이미지 기본 높이 설정 */
+      object-fit: cover; /* 이미지가 카드에 맞게 조절되도록 설정 */
+    }
+    .custom-card:hover {
+      transform: scale(1.05); /* 마우스 호버 시 조금 더 크게 스케일링 */
+      cursor: pointer; /* 마우스 커서 모양 변경 */
+    }
+    header {
+      width: 100%;
+      height: 300px; /* 헤더 높이 설정 */
+      background-image: url('https://cdn.pixabay.com/photo/2024/03/27/12/48/dog-8659097_1280.jpg'); /* 배경 이미지 경로 설정 */
+      background-size: cover; /* 화면에 꽉 차게 배경 이미지 크기 조정 */
+      background-position: center; /* 배경 이미지 위치 설정 */
+    }
+    body {
+      min-height: 250vh; /* 페이지 최소 높이 설정 */
+      display: flex;
+      flex-direction: column;
+    }
+    section.container {
+      flex-grow: 1;
+    }
+    .intro-text {
+      font-size: 1.7rem; /* 글자 크기 설정 (기본 1rem, 1.25rem은 약 20px) */
+    }
+  </style>
+</head>
+<body class="bg-success bg-opacity-10">
+<header></header>
+
+<!-- 팀 소개 섹션 추가 -->
+<section class="container my-5">
+  <h1 class="display-5 fw-bold text-center">팀 소개</h1>
+  <br>
+  <br>
+  <p class="lead text-center intro-text">
+    안녕하세요. 저희는 내일배움캠프 자바 6기의 11조인 이겨내(조)입니다.<br>
+    교육 기간 동안 발생하는 역경들을 모든 팀원들이 다 같이 뭉쳐 이겨내고자 하는 염원을 담아<br>
+    팀 이름을 <strong>이겨내(조)</strong>라고 정하였습니다.
+  </p>
+  <!-- 팀 소개 이미지 추가 -->
+  <div class="text-center">
+    <img src="../images/positive.png" alt="팀 이미지" class="img-fluid" style="width: 900px; height: auto;">
+  </div>
+</section>
+
+<!-- 팀원 소개 섹션 -->
+<section class="container">
+  <h1 class="display-5 fw-bold p-5 text-center">이겨내(조) 팀원들을 소개합니다!</h1>
+  <div class="row g-3 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 row-cols-xl-5">
+    <div class="col">
+      <div class="card custom-card" onclick="location.href='memberA.html'">
+        <img src="../images/김도균.jpeg" alt="김도균">
+        <div class="card-body text-center">
+          <h2 class="card-title fs-5 fw-bold">팀장</h2>
+          <p class="card-text">김도균</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card custom-card" onclick="location.href='MemberB.html'">
+        <img src="" class="card-img-top" alt="권정익">
+        <div class="card-body text-center">
+          <h2 class="card-title fs-5 fw-bold">팀원</h2>
+          <p class="card-text">권정익</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card custom-card" onclick="location.href='MemberC.html'">
+        <img src="" class="card-img-top" alt="배은서">
+        <div class="card-body text-center">
+          <h2 class="card-title fs-5 fw-bold">팀원</h2>
+          <p class="card-text">배은서</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card custom-card" onclick="location.href='MemberD.html'">
+        <img src="" class="card-img-top" alt="이동휘">
+        <div class="card-body text-center">
+          <h2 class="card-title fs-5 fw-bold">팀원</h2>
+          <p class="card-text">이동휘</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card custom-card" onclick="location.href='MemberE.html'">
+        <img src="" class="card-img-top" alt="남주혁">
+        <div class="card-body text-center">
+          <h2 class="card-title fs-5 fw-bold">팀원</h2>
+          <p class="card-text">남주혁</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // JavaScript로 각 카드에 마우스 이벤트 추가
+  const cards = document.querySelectorAll('.custom-card');
+  
+  cards.forEach(card => {
+    card.addEventListener('mouseover', function() {
+      this.style.transform = 'scale(1.1)'; // 마우스 호버 시 크기 확대
+    });
+    
+    card.addEventListener('mouseout', function() {
+      this.style.transform = 'scale(1)'; // 마우스가 떠나면 원래 크기로 복원
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+OJ0fEMtDJHjqzD8twtkM7b5sj1SV" crossorigin="anonymous"></script>
+</body>
+</html>

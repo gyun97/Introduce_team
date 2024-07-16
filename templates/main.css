@@ -1,0 +1,105 @@
+/* 기존 스타일 유지 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+.team-member img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+}
+.team-member h2 {
+    margin: 0 0 10px;
+    color: #555;
+}
+.team-member p {
+    margin: 5px 0;
+    color: #777;
+}
+/* 방명록 스타일 추가 */
+.guestbook {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    padding: 20px;
+}
+.guestbook h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.guestbook-entry {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+.guestbook-entry:last-child {
+    border-bottom: none;
+}
+.guestbook-entry .author {
+    font-weight: bold;
+    color: #555;
+}
+.guestbook-entry .date {
+    color: #999;
+    font-size: 0.9em;
+}
+.guestbook-entry .message {
+    margin-top: 10px;
+}
+.guestbook-form {
+    margin-top: 20px;
+}
+.guestbook-form input, .guestbook-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.guestbook-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.guestbook-form button:hover {
+    background-color: #45a049;
+}
+.delete-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.delete-btn:hover {
+    background-color: #cc0000;
+}

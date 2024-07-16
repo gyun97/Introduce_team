@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.member-info {
+    text-align: center;
+}
+.member-info img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.member-info h2 {
+    margin: 20px 0 10px;
+    color: #555;
+}
+.member-info p {
+    color: #777;
+}
+.back-link {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #007BFF;
+}
