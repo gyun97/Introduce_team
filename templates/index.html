@@ -36,6 +36,21 @@
     .intro-text {
       font-size: 1.7rem; /* 글자 크기 설정 (기본 1rem, 1.25rem은 약 20px) */
     }
+    .row {
+      display: flex;
+      justify-content: center; /* 수평 중앙 정렬 */
+      align-items: center; /* 수직 중앙 정렬 */
+      flex-wrap: wrap; /* 카드가 여러 줄로 정렬될 수 있도록 함 */
+    }
+    .guestbook-button {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* 수직 중앙 정렬 추가 */
+      margin-top: 20px; 
+    }
+    .guestbook-button a {
+      padding: 10px 20px; /* 버튼의 수직 크기를 줄이기 위한 사용자 정의 패딩 설정 */
+    }
   </style>
 </head>
 <body class="bg-success bg-opacity-10">
@@ -43,7 +58,7 @@
 
 <!-- 팀 소개 섹션 추가 -->
 <section class="container my-5">
-  <h1 class="display-5 fw-bold text-center">팀 소개</h1>
+  <h1 class="display-5 fw-bold text-center">이겨내(조) 소개</h1>
   <br>
   <br>
   <p class="lead text-center intro-text">
@@ -53,8 +68,13 @@
   </p>
   <!-- 팀 소개 이미지 추가 -->
   <div class="text-center">
-    <img src="../images/positive.png" alt="팀 이미지" class="img-fluid" style="width: 900px; height: auto;">
+    <img src="../images/positive.png" alt="팀 이미지" class="img-fluid" style="width: 1000px; height: auto;">
   </div>
+</section>
+
+<!-- 방명록 페이지로 이동하는 버튼 추가 -->
+<section class="container guestbook-button">
+  <a href="guestbook.html" class="btn btn-primary btn-lg">방명록 페이지로 이동</a>
 </section>
 
 <!-- 팀원 소개 섹션 -->
@@ -81,7 +101,7 @@
     </div>
     <div class="col">
       <div class="card custom-card" onclick="location.href='MemberC.html'">
-        <img src="" class="card-img-top" alt="배은서">
+        <img src="../images/배은서.jpg" class="card-img-top" alt="배은서">
         <div class="card-body text-center">
           <h2 class="card-title fs-5 fw-bold">팀원</h2>
           <p class="card-text">배은서</p>
@@ -97,12 +117,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card custom-card" onclick="location.href='MemberE.html'">
-        <img src="" class="card-img-top" alt="남주혁">
-        <div class="card-body text-center">
-          <h2 class="card-title fs-5 fw-bold">팀원</h2>
-          <p class="card-text">남주혁</p>
+  
         </div>
       </div>
     </div>
