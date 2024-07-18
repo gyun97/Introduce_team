@@ -1,0 +1,165 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 50px;
+}
+.main-title {
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-title a {
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.main-title a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #007bff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.main-title a:hover {
+    color: #0056b3;
+}
+
+.main-title a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+.guestbook {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.guestbook h2 {
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.guestbook-entry {
+    background-color: #f1f3f5;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.guestbook-entry .author {
+    font-weight: bold;
+    color: #495057;
+}
+.guestbook-entry .date {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-left: 10px;
+}
+.guestbook-entry .message {
+    margin-top: 10px;
+}
+.guestbook-form {
+    margin-top: 30px;
+}
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.delete-button:hover {
+    background-color: #c82333;
+}
+.guestbook-form {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.guestbook-form .form-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.guestbook-form .form-group {
+    margin-bottom: 0;
+}
+
+.guestbook-form .name-input {
+    flex: 0 0 20%; /* 이름 입력 폼의 너비를 20%로 고정 */
+}
+
+.guestbook-form .message-input {
+    flex: 1; /* 나머지 공간을 모두 차지하도록 설정 */
+}
+
+.guestbook-form .submit-button {
+    flex: 0 0 auto; /* 버튼의 크기에 맞게 자동 조절 */
+}
+
+.guestbook-form input {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%; /* 입력 폼이 부모 요소의 전체 너비를 차지하도록 설정 */
+}
+
+.guestbook-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+
+.guestbook-form button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%; /* 버튼의 높이를 입력 폼과 동일하게 설정 */
+}
+
+.guestbook-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .guestbook-form .form-row {
+        flex-direction: column;
+    }
+    
+    .guestbook-form .name-input,
+    .guestbook-form .message-input,
+    .guestbook-form .submit-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
